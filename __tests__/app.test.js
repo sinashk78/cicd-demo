@@ -12,3 +12,15 @@ it("should respond with a status of 200", async () => {
 
   expect(response.status).toBe(200);
 });
+
+it("should respond with Bye!", async () => {
+  const response = await request(app).get("/bye").send();
+
+  expect(response.text).toBe("Bye!");
+});
+
+it("should respond with a status of 200", async () => {
+  const response = await request(app).get("/bye").send();
+
+  expect(response.status).toBe(200);
+});
